@@ -23,6 +23,7 @@
                     primary: '#3752FD',
                     dark1: '#00303C',
                     dark2: '#1E1E1E',
+                    backcolor: '#F4F7FF'
                 },
                 fontFamily:{
                     'poppins': ["Poppins", 'serif'],
@@ -36,7 +37,65 @@
         }
     </script>
 </head>
-<body class="font-poppins">
+<body class="font-poppins bg-backcolor">
+    <section class="lg:max-w-screen-xl max-w-screen-2xl mx-auto">
+        <header class="py-3 mt-2 bg-white rounded-lg">
+            <nav class="flex justify-between">
+                <!-- Nav Brands Logo  -->
+                <div class="flex items-center gap-x-2">
+                    <img src="./assets/logo.png" alt="">
+                    <h3 class="text-[2.25rem] text-dark1">Dev<span class="font-bold">Board</span></h3>
+                </div>
+                <!-- Nav Right Side  -->
+                <div class="flex items-center">
+                    <div class="flex items-center mr-6">
+                        <img src="./assets/checkbox.png" alt="">
+                        <span class="text-[2rem] text-dark2 inline-block ml-4 font-semibold">23</span>
+                    </div>
+                    <div class="mr-5">
+                        <img src="./assets/theme-btn.png" alt="">
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </section>
 
+    <main class="pt-4">
+        <section class="lg:max-w-screen-xl max-w-screen-2xl mx-auto">
+            <div class="flex gap-x-5">
+                <!-- left div  -->
+                <div class="basis-4/5 border bg-white p-5 rounded-xl">
+                    <div class="flex">
+                        <div class="flex items-center bg-backcolor basis-[20%]">
+                            <img src="./assets/checkbox.png" alt="">
+                            <div class="ml-8">
+                                <h5 class="text-sm text-dark2">Task Assigned</h5>
+                                <span class="text-[2rem] text-dark2 font-semibold">05</span>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <img src="./assets/board.png" alt="">
+                            <div>
+                                <p>Discover Something New Today!</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-regular fa-clock"></i>
+                            <div>
+                                <p>Wed ,<time datetime="">Jul 28 2025 </time></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- right div  -->
+                <div class="basis-1/5 border bg-white">
+                    <div>
+                        <h3 class="text-center"><i class="fa-regular fa-clock"></i>Activity Log</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
