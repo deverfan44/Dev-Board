@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <!-- poppins font cdn  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Tailwind Css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Added Custom Tailwind  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    primary: '#3752FD',
+                    dark1: '#00303C',
+                    dark2: '#1E1E1E',
+                    backcolor: '#F4F7FF'
+                },
+                fontFamily:{
+                    'poppins': ["Poppins", 'serif'],
+                },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-poppins bg-backcolor">
+    <section class="lg:max-w-screen-xl max-w-screen-2xl mx-auto">
+        <header class="py-3 px-3 mt-2 bg-white rounded-lg">
+            <nav class="flex justify-between">
+                <!-- Nav Brands Logo  -->
+                <div class="flex items-center gap-x-2">
+                    <img src="./assets/logo.png" alt="">
+                    <h3 class="text-[2.25rem] text-dark1">Dev<span class="font-bold">Board</span></h3>
+                </div>
+                <!-- Nav Right Side  -->
+                <div class="flex items-center">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-md" id="back-desk">Back to Desk</button>
+                </div>
+            </nav>
+        </header>
+    </section>
+
+    <main class="py-5">
+        <section class="lg:max-w-screen-xl max-w-screen-2xl mx-auto">
+            <div class="mb-4">
+                <h1 class="text-center font-bold text-2xl">Blogs</h1>
+            </div>
+            <div>
+                <!-- card  -->
+                <div class="bg-white rounded-lg py-5 mb-3">
+                    <div class="border-b border-gray-300 px-6 pb-3">
+                        <h4 class="font-semibold">Question-1: What are the different ways to select an element in the DOM?</h4>
+                    </div>
+                    <div class="px-6 mt-3 text-dark1">
+                        <p>There are many different ways to select an element in DOM. Example</p>
+                        <ul class="list-disc ml-5">
+                            <li>Id Selector</li>
+                            <li>Tag Selector</li>
+                            <li>Class Selector</li>
+                            <li>Query Selector</li>
+                        </ul>
+                        <p>Here Id Selector is most use for any type of project. Because it's give only one html element. But others selector givs a HTML collection, which is a array like object</p>
+                    </div>
+                </div>
+                <!-- card  -->
+                <div class="bg-white rounded-lg py-5 mb-3">
+                    <div class="border-b border-gray-300 px-6 pb-3">
+                        <h4 class="font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h4>
+                    </div>
+                    <div class="px-6 mt-3 text-dark1">
+                        <p>InnerHTML: InnerHTML gets or sets an html element, including wite html tag and text</p>
+                        <p>InnerText: InnerText gets of set an html element only it's inner text</p>
+                        <p>Text Content: TextConetn gets or sets the text of an html element including all child nodes</p>
+                    </div>
+                </div>
+                <!-- card  -->
+                <div class="bg-white rounded-lg py-5 mb-3">
+                    <div class="border-b border-gray-300 px-6 pb-3">
+                        <h4 class="font-semibold">What is event delegation in the DOM?</h4>
+                    </div>
+                    <div class="px-6 mt-3 text-dark1">
+                        <p>Event Delegation is a useful method which allows you to handle a specific element to a parent element. we can target specific elemnet by event delegation. We use event.target for target.</p>
+                    </div>
+                </div>
+                <!-- card  -->
+                <div class="bg-white rounded-lg py-5 mb-3">
+                    <div class="border-b border-gray-300 px-6 pb-3">
+                        <h4 class="font-semibold">What is event bubbling in the DOM?</h4>
+                    </div>
+                    <div class="px-6 mt-3 text-dark1">
+                        <p>Event bubbling is a method in javascript DOM where an event start form the target element and then bubbles to the up. We can stop it using event.stopPropagation();</p>
+                    </div>
+                </div>
+                <!-- card  -->
+                <div class="bg-white rounded-lg py-5 mb-3">
+                    <div class="border-b border-gray-300 px-6 pb-3">
+                        <h4 class="font-semibold">How do you create, add, and remove elements using JavaScript?</h4>
+                    </div>
+                    <div class="px-6 mt-3 text-dark1">
+                        <p>For element creating we use document.createElement() method.</p>
+                        <p>For element adding we use parentElement.appendChild() method.</p>
+                        <p>For element removing we use element.remove() method.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- javascript link  -->
+    <script src="./script.js/location2.js"></script>
+</body>
+</html>

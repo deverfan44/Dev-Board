@@ -35,7 +35,7 @@
 </head>
 <body class="font-poppins bg-backcolor">
     <section class="lg:max-w-screen-xl max-w-screen-2xl mx-auto">
-        <header class="py-3 mt-2 bg-white rounded-lg">
+        <header class="py-3 px-3 mt-2 bg-white rounded-lg">
             <nav class="flex justify-between">
                 <!-- Nav Brands Logo  -->
                 <div class="flex items-center gap-x-2">
@@ -49,7 +49,7 @@
                         <span class="text-[2rem] text-dark2 inline-block ml-4 font-semibold" id="complete-task">23</span>
                     </div>
                     <div class="mr-5">
-                        <img src="./assets/theme-btn.png" alt="">
+                        <img src="./assets/theme-btn.png" class="cursor-pointer" id="backColorChange" alt="">
                     </div>
                 </div>
             </nav>
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                         <!-- card -->
-                        <div class="flex-grow flex items-center bg-gradient-to-r from-primary from-53% via-[#6C7FFA] via-53% to-[#9BA8F8] px-8 py-5 rounded-lg">
+                        <div class="flex-grow flex items-center bg-gradient-to-r from-primary from-53% via-[#6C7FFA] via-53% to-[#9BA8F8] px-8 py-5 rounded-lg cursor-pointer" id="blog-page">
                             <img src="./assets/board.png" alt="">
                             <div class="ml-5">
                                 <p class="text-[1.5rem] text-white">Discover Something New Today!</p>
@@ -79,10 +79,9 @@
                         </div>
                         <!-- card -->
                         <div class="flex items-center justify-center rounded-lg bg-backcolor basis-[25%]">
-                            <i class="fa-regular fa-clock text-2xl"></i>
+                            <i class="fa-solid fa-calendar-week text-2xl"></i>
                             <div class="ml-5">
-                                <p>Wed ,</p>
-                                <time datetime="" class="font-semibold">Jul 28 2025 </time>
+                                <p id="currentDate"></p>
                             </div>
                         </div>
                     </div>
@@ -93,16 +92,16 @@
                             <div>
                                 <span class="inline-block bg-white px-4 py-2 rounded-md">ShopEase</span>
                             </div>
-                            <div class="mb-8">
+                            <div class="mb-4">
                                 <h1 class="text-[1.5rem] my-4">Fix Mobile Button Issue </h1>
                                 <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between border-t border-dashed pt-4">
                                 <div>
                                     <p class="text-[14px] text-gray-600">Deadline</p>
                                     <time datetime="" class="text-[16px]">21 March 2025</time>
                                 </div>
-                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg">Completed</button>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg complete-btn">Completed</button>
                             </div>
                         </div>
                         <!-- card -->
@@ -110,11 +109,11 @@
                             <div>
                                 <span class="inline-block bg-white px-4 py-2 rounded-md">CloudSync</span>
                             </div>
-                            <div class="mb-8">
+                            <div class="mb-4">
                                 <h1 class="text-[1.5rem] my-4">Add Dark Mode</h1>
                                 <p class="bg-white p-4 text-gray-600 text-[14px]">Store the user's preference in <span class="truncate text-ellipsis overflow-hidden block">localStorage, update CSS variables dynamically, and apply a smooth transition effect.</span></p>
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between  border-t border-dashed pt-4">
                                 <div>
                                     <p class="text-[14px] text-gray-600">Deadline</p>
                                     <time datetime="" class="text-[16px]">21 March 2025</time>
@@ -127,11 +126,29 @@
                             <div>
                                 <span class="inline-block bg-white px-4 py-2 rounded-md">SwiftPay</span>
                             </div>
-                            <div class="mb-8">
+                            <div class="mb-4">
                                 <h1 class="text-[1.5rem] my-4">Optimize  Home page</h1>
                                 <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between border-t border-dashed pt-4">
+                                <div>
+                                    <p class="text-[14px] text-gray-600">Deadline</p>
+                                    <time datetime="" class="text-[16px]">21 March 2025</time>
+                                </div>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg complete-btn">Completed</button>
+                            </div>
+                        </div>
+
+                        <!-- card -->
+                        <div class="bg-backcolor rounded-lg p-4">
+                            <div>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">Meta</span>
+                            </div>
+                            <div class="mb-4">
+                                <h1 class="text-[1.5rem] my-4">Add new emoji 🤲</h1>
+                                <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
+                            </div>
+                            <div class="flex justify-between border-t border-dashed pt-4">
                                 <div>
                                     <p class="text-[14px] text-gray-600">Deadline</p>
                                     <time datetime="" class="text-[16px]">21 March 2025</time>
@@ -142,52 +159,35 @@
                         <!-- card -->
                         <div class="bg-backcolor rounded-lg p-4">
                             <div>
-                                <span class="inline-block bg-white px-4 py-2 rounded-md">ShopEase</span>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">Google LLC</span>
                             </div>
-                            <div class="mb-8">
-                                <h1 class="text-[1.5rem] my-4">Fix Mobile Button Issue </h1>
+                            <div class="mb-4">
+                                <h1 class="text-[1.5rem] my-4">Integrate OpenAI API </h1>
                                 <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between border-t border-dashed pt-4">
                                 <div>
                                     <p class="text-[14px] text-gray-600">Deadline</p>
                                     <time datetime="" class="text-[16px]">21 March 2025</time>
                                 </div>
-                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg">Completed</button>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg complete-btn">Completed</button>
                             </div>
                         </div>
                         <!-- card -->
                         <div class="bg-backcolor rounded-lg p-4">
                             <div>
-                                <span class="inline-block bg-white px-4 py-2 rounded-md">ShopEase</span>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">Glassdoar</span>
                             </div>
-                            <div class="mb-8">
-                                <h1 class="text-[1.5rem] my-4">Fix Mobile Button Issue </h1>
+                            <div class="mb-4">
+                                <h1 class="text-[1.5rem] my-4">Improve Job searching </h1>
                                 <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between border-t border-dashed pt-4">
                                 <div>
                                     <p class="text-[14px] text-gray-600">Deadline</p>
                                     <time datetime="" class="text-[16px]">21 March 2025</time>
                                 </div>
-                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg">Completed</button>
-                            </div>
-                        </div>
-                        <!-- card -->
-                        <div class="bg-backcolor rounded-lg p-4">
-                            <div>
-                                <span class="inline-block bg-white px-4 py-2 rounded-md">ShopEase</span>
-                            </div>
-                            <div class="mb-8">
-                                <h1 class="text-[1.5rem] my-4">Fix Mobile Button Issue </h1>
-                                <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
-                            </div>
-                            <div class="flex justify-between">
-                                <div>
-                                    <p class="text-[14px] text-gray-600">Deadline</p>
-                                    <time datetime="" class="text-[16px]">21 March 2025</time>
-                                </div>
-                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg">Completed</button>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg complete-btn">Completed</button>
                             </div>
                         </div>
                     </div>
@@ -219,5 +219,7 @@
     <!-- javascript link  -->
     <script src="./script.js/complete.js"></script>
     <script src="./script.js/clear.js"></script>
+    <script src="./script.js/location.js"></script>
+    <script src="./script.js/backgroundChange.js"></script>
 </body>
 </html>

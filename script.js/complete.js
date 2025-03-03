@@ -8,6 +8,9 @@ for(const btn of completedBtn) {
         btn.setAttribute('disabled',true);
         btn.style.backgroundColor = 'gray';
         document.getElementById('task-assign').innerText -= 1;
+        if(document.getElementById('task-assign').innerText == 0) {
+            alert('Congrates! You have done all the task completely');
+        }
         const doneTask = document.getElementById('complete-task').innerText;
         console.log(doneTask);
         document.getElementById('complete-task').innerText = Number(doneTask)+1;
@@ -32,3 +35,6 @@ for(const btn of completedBtn) {
     })
 }
 
+
+const d = new Date();
+document.getElementById('currentDate').innerText = `${d.toDateString()}`;
