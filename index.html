@@ -28,10 +28,6 @@
                 fontFamily:{
                     'poppins': ["Poppins", 'serif'],
                 },
-                // backgroundImage: {
-                //     'banner': "linear-gradient(to top, rgba(0,0,0), transparent), url('./images/banner.png')",
-                //     'client': "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./images/banner.png')",
-                // },
                 }
             }
         }
@@ -50,7 +46,7 @@
                 <div class="flex items-center">
                     <div class="flex items-center mr-6">
                         <img src="./assets/checkbox.png" alt="">
-                        <span class="text-[2rem] text-dark2 inline-block ml-4 font-semibold">23</span>
+                        <span class="text-[2rem] text-dark2 inline-block ml-4 font-semibold" id="complete-task">23</span>
                     </div>
                     <div class="mr-5">
                         <img src="./assets/theme-btn.png" alt="">
@@ -64,38 +60,164 @@
         <section class="lg:max-w-screen-xl max-w-screen-2xl mx-auto">
             <div class="flex gap-x-5">
                 <!-- left div  -->
-                <div class="basis-4/5 border bg-white p-5 rounded-xl">
-                    <div class="flex">
-                        <div class="flex items-center bg-backcolor basis-[20%]">
+                <div class="basis-4/5 bg-white p-5 rounded-xl">
+                    <div class="flex gap-x-3">
+                        <!-- card -->
+                        <div class="flex items-center justify-center rounded-lg bg-backcolor basis-[25%]">
                             <img src="./assets/checkbox.png" alt="">
                             <div class="ml-8">
                                 <h5 class="text-sm text-dark2">Task Assigned</h5>
-                                <span class="text-[2rem] text-dark2 font-semibold">05</span>
+                                <span class="text-[2rem] text-dark2 font-semibold">0<span id="task-assign">6</span></span>
                             </div>
                         </div>
-                        <div class="flex-grow">
+                        <!-- card -->
+                        <div class="flex-grow flex items-center bg-gradient-to-r from-primary from-53% via-[#6C7FFA] via-53% to-[#9BA8F8] px-8 py-5 rounded-lg">
                             <img src="./assets/board.png" alt="">
-                            <div>
-                                <p>Discover Something New Today!</p>
+                            <div class="ml-5">
+                                <p class="text-[1.5rem] text-white">Discover Something New Today!</p>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fa-regular fa-clock"></i>
+                        <!-- card -->
+                        <div class="flex items-center justify-center rounded-lg bg-backcolor basis-[25%]">
+                            <i class="fa-regular fa-clock text-2xl"></i>
+                            <div class="ml-5">
+                                <p>Wed ,</p>
+                                <time datetime="" class="font-semibold">Jul 28 2025 </time>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 mt-8 gap-3">
+                        <!-- card -->
+                        <div class="bg-backcolor rounded-lg p-4">
                             <div>
-                                <p>Wed ,<time datetime="">Jul 28 2025 </time></p>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">ShopEase</span>
+                            </div>
+                            <div class="mb-8">
+                                <h1 class="text-[1.5rem] my-4">Fix Mobile Button Issue </h1>
+                                <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-[14px] text-gray-600">Deadline</p>
+                                    <time datetime="" class="text-[16px]">21 March 2025</time>
+                                </div>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg">Completed</button>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <div class="bg-backcolor rounded-lg p-4">
+                            <div>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">CloudSync</span>
+                            </div>
+                            <div class="mb-8">
+                                <h1 class="text-[1.5rem] my-4">Add Dark Mode</h1>
+                                <p class="bg-white p-4 text-gray-600 text-[14px]">Store the user's preference in <span class="truncate text-ellipsis overflow-hidden block">localStorage, update CSS variables dynamically, and apply a smooth transition effect.</span></p>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-[14px] text-gray-600">Deadline</p>
+                                    <time datetime="" class="text-[16px]">21 March 2025</time>
+                                </div>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg complete-btn">Completed</button>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <div class="bg-backcolor rounded-lg p-4">
+                            <div>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">SwiftPay</span>
+                            </div>
+                            <div class="mb-8">
+                                <h1 class="text-[1.5rem] my-4">Optimize  Home page</h1>
+                                <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-[14px] text-gray-600">Deadline</p>
+                                    <time datetime="" class="text-[16px]">21 March 2025</time>
+                                </div>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg complete-btn">Completed</button>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <div class="bg-backcolor rounded-lg p-4">
+                            <div>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">ShopEase</span>
+                            </div>
+                            <div class="mb-8">
+                                <h1 class="text-[1.5rem] my-4">Fix Mobile Button Issue </h1>
+                                <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-[14px] text-gray-600">Deadline</p>
+                                    <time datetime="" class="text-[16px]">21 March 2025</time>
+                                </div>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg">Completed</button>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <div class="bg-backcolor rounded-lg p-4">
+                            <div>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">ShopEase</span>
+                            </div>
+                            <div class="mb-8">
+                                <h1 class="text-[1.5rem] my-4">Fix Mobile Button Issue </h1>
+                                <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-[14px] text-gray-600">Deadline</p>
+                                    <time datetime="" class="text-[16px]">21 March 2025</time>
+                                </div>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg">Completed</button>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <div class="bg-backcolor rounded-lg p-4">
+                            <div>
+                                <span class="inline-block bg-white px-4 py-2 rounded-md">ShopEase</span>
+                            </div>
+                            <div class="mb-8">
+                                <h1 class="text-[1.5rem] my-4">Fix Mobile Button Issue </h1>
+                                <p class="bg-white p-4 text-gray-600 text-[14px]">Debug using Chrome DevTools, <span class="truncate text-ellipsis overflow-hidden block">check for overlapping elements, and ensure onClick works properly</span></p>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-[14px] text-gray-600">Deadline</p>
+                                    <time datetime="" class="text-[16px]">21 March 2025</time>
+                                </div>
+                                <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg">Completed</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- right div  -->
-                <div class="basis-1/5 border bg-white">
-                    <div>
-                        <h3 class="text-center"><i class="fa-regular fa-clock"></i>Activity Log</h3>
+                <div class="basis-1/5 bg-white">
+                    <div class="py-5 text-center border-b border-dashed">
+                        <h3 class="text-center text-xl"><i class="fa-regular fa-clock mr-4"></i>Activity Log</h3>
+                        <button class="btn bg-blue-600 text-white px-4 py-2 rounded-lg mt-4" id="clear-btn">Clear History</button>
+                    </div>
+                    <div id="history-container" class="p-3">
+
+                        <!-- <div class="history bg-backcolor p-3 rounded-md mb-2">
+                            <p class="text-sm text-gray-600">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                        </div>
+
+                        <div class="history bg-backcolor p-3 rounded-md">
+                            <p class="text-sm text-gray-600">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+
+
+    <!-- javascript link  -->
+    <script src="./script.js/complete.js"></script>
+    <script src="./script.js/clear.js"></script>
 </body>
 </html>
