@@ -12,7 +12,6 @@ for(const btn of completedBtn) {
             alert('Congrates! You have done all the task completely');
         }
         const doneTask = document.getElementById('complete-task').innerText;
-        console.log(doneTask);
         document.getElementById('complete-task').innerText = Number(doneTask)+1;
 
         const bubble = btn.parentElement.parentElement.children[1].firstChild.nextSibling;
@@ -20,12 +19,17 @@ for(const btn of completedBtn) {
         div.classList.add("bg-backcolor", "p-3", "rounded-md", "mb-2");
         const p = document.createElement('p');
         const current = new Date();
-        const hours = current.getHours();
+        let hours = current.getHours();
         const minutes = current.getMinutes();
         const seconds = current.getSeconds();
         let timetype = null;
-        if(hours > 12) timetype = 'PM';
-        else timetype = 'AM';
+        if(hours > 12) {
+            timetype = 'PM';
+            hours -= 12;
+        }
+        else {
+            timetype = 'AM'
+        };
 
         p.innerText = `You have Complete The Task ${bubble.innerText} at ${hours}:${minutes}:${seconds} ${timetype}`;
         p.classList.add("text-xs", "text-gray-600");
